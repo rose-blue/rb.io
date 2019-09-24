@@ -1,13 +1,22 @@
 $font: 'Work Sans';
 $bg: #161D25;
+$translucent-bg: rgba($color: #101317, $alpha: 0.8);
 $text: #B2E1FF;
+$orange: #F27047;
+$red: #F2474C;
 
 body {
   font-family: $font;
   background: $bg;
+  color: $text;
+  font-weight: 400;
 }
 
 h1 {
   margin: 0;
   font-weight: 300;
+}
+
+h2, h3, h4, h5 {
+  font-weight: 400;
 }
