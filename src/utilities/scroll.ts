@@ -125,11 +125,11 @@ const escapeCharacters = function(id) {
     }
 
     if(
-      codeUnit >= 0x0080 ||
-      codeUnit === 0x002D ||
-      codeUnit === 0x005F ||
-      codeUnit >= 0x0030 && codeUnit <= 0x0039 ||
-      codeUnit >= 0x0041 && codeUnit <= 0x005A ||
+      // eslint-disable-next-line
+      codeUnit >= 0x0080 || codeUnit === 0x002D || codeUnit === 0x005F ||
+      // eslint-disable-next-line
+      codeUnit >= 0x0030 && codeUnit <= 0x0039 || codeUnit >= 0x0041 && codeUnit <= 0x005A ||
+      // eslint-disable-next-line
       codeUnit >= 0x0061 && codeUnit <= 0x007A
     ) {
       result += string.charAt(index);
@@ -260,8 +260,8 @@ const emitEvent = function(type, options, anchor?, toggle?) {
 
 export const scroll = function(selector, options?: ScrollSettings) {
   let scroll: any = {};
+  // eslint-disable-next-line
   let settings: ScrollSettings, anchor, toggle, fixedHeader, eventTimeout, animationInterval;
-  
 
   scroll.cancelScroll = function(noEvent) {
     cancelAnimationFrame(animationInterval);
@@ -293,7 +293,7 @@ export const scroll = function(selector, options?: ScrollSettings) {
 
     const stopAnimateScroll = function(position, endLocation) {
       let currentLocation = window.pageYOffset;
-      if(position == endLocation || currentLocation == endLocation || ((startLocation < endLocation && window.innerHeight + currentLocation) >= documentHeight)) {
+      if(position === endLocation || currentLocation === endLocation || ((startLocation < endLocation && window.innerHeight + currentLocation) >= documentHeight)) {
         scroll.cancelScroll(true);
         adjustFocus(anchor, endLocation, isNum);
 
@@ -333,7 +333,6 @@ export const scroll = function(selector, options?: ScrollSettings) {
     emitEvent('scrollStart', _settings, anchor, toggle);
 
     scroll.cancelScroll(true);
-    console.log('test');
     window.requestAnimationFrame(loopAnimateScroll);
   }
 
@@ -396,6 +395,7 @@ export const scroll = function(selector, options?: ScrollSettings) {
   }
 
   const init = function() {
+    // eslint-disable-next-line
     if(!supports()) throw 'This browser can\'t smooth scroll! Yikes!';
 
     scroll.destroy();
