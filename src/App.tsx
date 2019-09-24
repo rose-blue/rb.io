@@ -20,9 +20,41 @@ class App extends React.Component<AppProps, AppState> {
       speedAsDuration: true,
       easing: 'easeInOutQuint'
     });
-    this.state = {
+    this.setState({
       scroll: SCROLL
-    };
+    });
+
+    window.addEventListener('scroll', this.headerScrollEffect, true);
+    this.headerScrollEffect();
+  }
+
+  headerScrollEffect = (event?) => {
+    const screenHeight = window.innerHeight;
+    const scrollHeight = window.scrollY;
+    const lefty = document.getElementById("Lefty");
+    const righty = document.getElementById("Righty");
+    const extendy = document.getElementById("Extendy");
+    if(scrollHeight > screenHeight) {
+      if(lefty.style.display!=='none') {
+        lefty.style.display = 'none';
+      }
+      if(righty.style.display!=='none') {
+        righty.style.display = 'none';
+      }
+      if(extendy.style.width!=='100%') {
+        extendy.style.width = '100%';
+      }
+    } else {
+      if(lefty.style.display!=='block') {
+        lefty.style.display = 'block';
+      }
+      if(righty.style.display!=='block') {
+        righty.style.display = 'block';
+      }
+      if(extendy.style.width==='100%') {
+        extendy.style.width = null;
+      }
+    }
   }
 
   render() {
@@ -36,35 +68,45 @@ class App extends React.Component<AppProps, AppState> {
         </div>
         <div className="Roseblue Left">
           <div className="container">
-            <div className="buoy">
+            <div id="Lefty" className="buoy">
               <div className="clip"></div>
             </div>
-            <h1>rose(blue)</h1>
+            <h1><span className="Rose">rose</span>(blue)<span className="Rose"></span></h1>
           </div>
         </div>
         <div className="Mast-text">
           <div className="container">
             <div className="text-container">
               <h1>designed to communicate,<br/>engineered to perform</h1>
-              <a data-scroll href="#testi">
+              <a data-scroll href="#who">
                 <Button style={{marginTop: '2rem'}}>learn how</Button>
               </a>
             </div>
           </div>
         </div>
-        <div id="testi" className="Roseblue Right">
-          <div className="buoy">
-            <div className="clip"></div>
+        <div id="who" className="Roseblue Right">
+          <div id="Extendy" className="buoy">
+            <div id="Righty" className="clip"></div>
           </div>
           <div className="container">
             <div className="nav">
-              nav
+              <div className="nav-item"><a href="#goesAchoo">services</a></div>
+              <div className="nav-item"><a href="#mowsTheView">about</a></div>
+              <div className="nav-item"><a href="#showsAnew">blog</a></div>
+              <div className="nav-item"><a href="#proseAskew">work</a></div>
+              <div className="nav-item"><a href="#throwsAdieu">contact</a></div>
             </div>
           </div>
         </div>
-        <div className="testi">
+        <div className="Who-We-Are">
           <div className="container">
-            <h2><span style={{fontWeight: 300}}>rose(blue)</span> is a design team focused on human-centered online experiences.<br/>We develop digital solutions to fulfill your practical needs and creative dreams.</h2>
+            <h2>We're a design team focused on human-centered online experiences.<br/>We develop digital solutions to fulfill your practical needs and creative dreams.</h2>
+          </div>
+        </div>
+        <div className="What-We-Do">
+          <div className="container">
+            <h2 className="title">What We Do</h2>
+            <p>[literally nothing]</p>
           </div>
         </div>
         <div style={{height: 3000}}></div>

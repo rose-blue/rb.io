@@ -6,7 +6,7 @@
     color: $text;
     width: 100%;
     &.Left {
-      z-index: 1;
+      z-index: 10;
       position: fixed;
       top: 0;
       .buoy {
@@ -59,7 +59,18 @@
         z-index: 11;
         padding-top: 0.8rem;
         padding-bottom: 0.8rem;
-        padding-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 60%;
+        margin-left: auto;
+        .nav-item {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          &:last-child {
+            padding-right: 0;
+          }
+        }
       }
     }
   }
@@ -99,8 +110,14 @@
       //fuck you if you browse at this width btw
       max-width: 100%;
     }
+    @media screen and (max-width: 1400px) {
+      max-width: calc(1400px - 5rem);
+      width: calc(100% - 3rem);
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
-  .testi {
+  .Who-We-Are {
     position: relative;
     z-index: 0;
     width: 100%;
@@ -113,4 +130,22 @@
       line-height: 1.5;
     }
   }
+  .What-We-Do {
+    background: $text;
+    color: $bg;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    .title {
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+}
+
+.Rose {
+  background: -webkit-linear-gradient(135deg, $orange, $red);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
