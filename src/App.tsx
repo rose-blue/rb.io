@@ -67,7 +67,7 @@ class App extends React.Component<AppProps, AppState> {
             <div id="Lefty" className="buoy">
               <div className="clip"></div>
             </div>
-            <a className="title">rose(blue)</a>
+            <a href="/" className="title">rose(blue)</a>
           </div>
         </div>
         <div className="Mast-text">
