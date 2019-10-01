@@ -23,7 +23,8 @@ class App extends React.Component<AppProps, AppState> {
     const lefty = document.getElementById("Lefty");
     const righty = document.getElementById("Righty");
     const extendy = document.getElementById("Extendy");
-    if(scrollHeight > screenHeight) {
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    if(scrollHeight > (screenHeight - 3*rem - 1)) {
       if(lefty.style.display!=='none') {
         lefty.style.display = 'none';
       }
@@ -44,6 +45,12 @@ class App extends React.Component<AppProps, AppState> {
         extendy.style.width = null;
       }
     }
+
+    if(scrollHeight > (screenHeight - 3*rem)) {
+      extendy.style.boxShadow = "0 0.1rem 0.2rem rgba(96, 91, 222, 0.4)";
+    } else {
+      extendy.style.boxShadow = null;
+    }
   }
 
   render() {
@@ -60,7 +67,7 @@ class App extends React.Component<AppProps, AppState> {
             <div id="Lefty" className="buoy">
               <div className="clip"></div>
             </div>
-            <h1><span className="Rose">rose</span>(blue)<span className="Rose"></span></h1>
+            <a className="title">rose(blue)</a>
           </div>
         </div>
         <div className="Mast-text">
@@ -96,14 +103,13 @@ class App extends React.Component<AppProps, AppState> {
             <p>[literally nothing]</p>
           </div>
         </div>
-        <div style={{height: 3000}}></div>
         <svg width="0" height="0">
           <defs>
             <clipPath id="right">
-              <path d="M0,48c14.1,0,27.8-12.2,40-24S65.9,0,80,0V48Z"/>
+              <path d="M0,48c14.1,0,27.8-12.2,40-24S65.9,0,81,0V48Z"/>
             </clipPath>
             <clipPath id="left">
-              <path d="M80,0C65.9,0,52.2,12.2,40,24S14.1,48,0,48V0Z"/>
+              <path d="M80,0C65.9,0,52.2,12.2,40,24S14.1,48,-1,48V0Z"/>
             </clipPath>
           </defs>
         </svg>

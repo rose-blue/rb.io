@@ -26,10 +26,13 @@
           clip-path: url(#left);
         }
       }
-      h1 {
+      .title {
         position: relative;
         z-index: 10;
         padding-left: 1rem;
+        line-height: 3rem;
+        font-size: 2rem;
+        font-weight: 400;
       }
     }
     &.Right {
@@ -57,13 +60,12 @@
       .nav {
         position: relative;
         z-index: 11;
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 60%;
         margin-left: auto;
+        line-height: 3rem;
         .nav-item {
           padding-left: 1rem;
           padding-right: 1rem;
@@ -87,6 +89,10 @@
     .text-container {
       padding-left: 1rem;
       padding-right: 1rem;
+    }
+    h1 {
+      padding-top: 10rem;
+      font-size: 2.5rem;
     }
   }
   .Hero-container {
@@ -125,7 +131,6 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
     text-align: center;
-    margin-top: 3px;
     h2 {
       line-height: 1.5;
     }
@@ -141,11 +146,10 @@
     }
   }
 }
-
-.Rose {
-  background: -webkit-linear-gradient(135deg, $orange, $red);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
+// .Rose {
+//   background: -webkit-linear-gradient(135deg, $orange, $red);
+//   background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   font-weight: 600;
+//   font-size: 1.5rem;
+// }
