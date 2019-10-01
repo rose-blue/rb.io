@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rb.io/static/css/main.d8f33836.chunk.css",
+    "main.js": "/rb.io/static/js/main.fa4a6010.chunk.js",
+    "main.js.map": "/rb.io/static/js/main.fa4a6010.chunk.js.map",
+    "runtime~main.js": "/rb.io/static/js/runtime~main.4025c149.js",
+    "runtime~main.js.map": "/rb.io/static/js/runtime~main.4025c149.js.map",
+    "static/js/2.4e8648dc.chunk.js": "/rb.io/static/js/2.4e8648dc.chunk.js",
+    "static/js/2.4e8648dc.chunk.js.map": "/rb.io/static/js/2.4e8648dc.chunk.js.map",
+    "index.html": "/rb.io/index.html",
+    "precache-manifest.8859e90ac239688f59575f5cf5b2af46.js": "/rb.io/precache-manifest.8859e90ac239688f59575f5cf5b2af46.js",
+    "service-worker.js": "/rb.io/service-worker.js",
+    "static/css/main.d8f33836.chunk.css.map": "/rb.io/static/css/main.d8f33836.chunk.css.map"
+  }
+}
