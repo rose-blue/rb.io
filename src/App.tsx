@@ -1,29 +1,18 @@
 import React from 'react';
 import './App.scss';
 import Hero from './components/hero';
-import Button from './components/button';
-
-import { scroll } from './utilities/scroll';
+import ButtonHero from './components/button-hero';
 
 type AppProps = {
 
 };
 
 type AppState = {
-  scroll: any
+
 };
 
 class App extends React.Component<AppProps, AppState> {
   componentDidMount() {
-    const SCROLL = scroll('a[href*="#"]', {
-      speed: 750,
-      speedAsDuration: true,
-      easing: 'easeInOutQuint'
-    });
-    this.setState({
-      scroll: SCROLL
-    });
-
     window.addEventListener('scroll', this.headerScrollEffect, true);
     this.headerScrollEffect();
   }
@@ -78,9 +67,7 @@ class App extends React.Component<AppProps, AppState> {
           <div className="container">
             <div className="text-container">
               <h1>designed to communicate,<br/>engineered to perform</h1>
-              <a data-scroll href="#who">
-                <Button style={{marginTop: '2rem'}}>learn how</Button>
-              </a>
+              <ButtonHero />
             </div>
           </div>
         </div>

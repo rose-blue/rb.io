@@ -1,0 +1,30 @@
+@import '../../sass/vars.scss';
+
+.Button-Hero {
+  position: relative;
+
+  #Button-Hero-Svg{
+    width: 175px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .Button-link {
+    position: absolute;
+    top: 33px;
+    height: 62px;
+    width: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      font-weight: 700;
+      font-size: 1.4rem;
+      background: -webkit-linear-gradient(65deg, $orange, $red);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
