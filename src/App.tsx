@@ -50,7 +50,7 @@ class App extends React.Component<AppProps, AppState> {
     return (
       <div className="App">
         {window.innerWidth > 6000 ? (<div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'black', zIndex: 1000}}>
-          <div style={{display: 'flex', height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}><h1>Hey! What the fuck is your problem.</h1></div>
+          <div style={{display: 'flex', height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}><h1>Hey! What's your problem.</h1></div>
         </div>) : null}
         <div className="Hero-container">
           <Hero />
@@ -71,7 +71,7 @@ class App extends React.Component<AppProps, AppState> {
             </div>
           </div>
         </div>
-        <div id="who" className="Roseblue Right">
+        <header id="who" className="Roseblue Right">
           <div id="Extendy" className="buoy">
             <div id="Righty" className="clip"></div>
           </div>
@@ -84,7 +84,7 @@ class App extends React.Component<AppProps, AppState> {
               <div className="nav-item"><a href="#throwsAdieu">contact</a></div>
             </div>
           </div>
-        </div>
+        </header>
         <div className="Who-We-Are">
           <div className="container">
             <h2>We're a design team focused on human-centered online experiences.<br/>We develop digital solutions to fulfill your practical needs and creative dreams.</h2>
