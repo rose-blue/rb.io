@@ -7,6 +7,10 @@ export const testUserAgent = (fnTrue: Function, fnFalse: Function) => {
   }
 }
 
+export function doNothing() {
+  //it does nothing. typescript sucks sometimes
+}
+
 export function ease(pos: any) {
   return (-Math.cos(pos * Math.PI) / 2) + 0.5;
 }
