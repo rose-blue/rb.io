@@ -5,6 +5,12 @@
   .Roseblue {
     color: $text;
     width: 100%;
+    .buoy {
+      background: $translucent-bg;
+      .clip {
+        background: $translucent-bg;
+      }
+    }
     &.Left {
       z-index: 10;
       position: fixed;
@@ -13,12 +19,10 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: $translucent-bg;
         width: 35%;
         height: 3rem;
         .clip {
           position: absolute;
-          background: $translucent-bg;
           top: 0;
           right: -5rem;
           width: 5rem;
@@ -38,18 +42,16 @@
     &.Right {
       position: sticky;
       top: 0;
-      z-index: 2;
+      z-index: 12;
       text-align: right;
       .buoy {
         position: absolute;
         top: 0;
         right: 0;
-        background: $translucent-bg;
         width: calc(65% - 5rem);
         height: 3rem;
         .clip {
           position: absolute;
-          background: $translucent-bg;
           top: 0;
           left: -5rem;
           width: 5rem;
@@ -69,9 +71,9 @@
         .nav-item {
           padding-left: 1rem;
           padding-right: 1rem;
-          &:last-child {
-            padding-right: 0;
-          }
+          // &:last-child {
+          //   padding-right: 0;
+          // }
         }
       }
     }
@@ -104,25 +106,6 @@
     left: 0;
     width: 100%;
   }
-  .container {
-    width: 100%;
-    max-width: calc(1400px - 2rem);
-    margin-left: auto;
-    margin-right: auto;
-    @media screen and (min-width: 3600px) {
-      max-width: calc(1800px - 2rem);
-    }
-    @media screen and (min-width: 4800px) {
-      //fuck you if you browse at this width btw
-      max-width: 100%;
-    }
-    @media screen and (max-width: 1400px) {
-      max-width: calc(1400px - 5rem);
-      width: calc(100% - 3rem);
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
   .Who-We-Are {
     position: relative;
     z-index: 0;
@@ -136,12 +119,43 @@
     }
   }
   .What-We-Do {
-    background: $text;
+    background: #fffffe;
     color: $bg;
     padding-top: 5rem;
     padding-bottom: 5rem;
     .title {
-      text-align: center;
+      text-align: left;
+      font-weight: 700;
+    }
+    .column {
+      width: 33%;
+      @media screen and (max-width: 800px) {
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+
+      .item {
+        padding: 1rem;
+        color: $text;
+        background: $bg;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        min-height: 294px;
+        min-width: 1rem;
+        border-radius: 0.5rem;
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .Coming-Soon {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: $text;
+    color: $bg;
+    .title {
+      text-align: right;
       font-weight: 700;
     }
   }

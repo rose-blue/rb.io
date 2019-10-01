@@ -1,6 +1,6 @@
 $font: 'Work Sans';
 $bg: #0F1533;
-$translucent-bg: rgba($color: #6165e2, $alpha: 0.8);
+$translucent-bg: rgba($color: #6165e2, $alpha: 0.9);
 $text: #B2E1FF;
 $orange: #F27047;
 $red: #F2474C;
@@ -27,4 +27,31 @@ a {
   &:visited {
     color: $text;
   }
+}
+
+.container {
+  width: 100%;
+  max-width: calc(1400px - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 3600px) {
+    max-width: calc(1800px - 2rem);
+  }
+  @media screen and (min-width: 4800px) {
+    //fuck you if you browse at this width btw
+    max-width: 100%;
+  }
+  @media screen and (max-width: 1400px) {
+    max-width: calc(1400px - 5rem);
+    width: calc(100% - 3rem);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
