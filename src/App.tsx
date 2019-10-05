@@ -54,8 +54,6 @@ class App extends React.Component<AppProps, AppState> {
   }
 
   render() {
-    const themeColorOne = '';
-    const themeColorTwo = '';
     return (
       <div className="App">
         {window.innerWidth > 6000 ? (
@@ -67,8 +65,8 @@ class App extends React.Component<AppProps, AppState> {
         </div>
         <div className="Roseblue Left">
           <div className="container">
-            <div id="Lefty" className="buoy test" style={{background: themeColorOne}}>
-              <div className="clip test" style={{background: themeColorOne}}></div>
+            <div id="Lefty" className="buoy test">
+              <div className="clip test"></div>
             </div>
             <a href="/" className="title">rose(blue)</a>
           </div>
@@ -82,8 +80,8 @@ class App extends React.Component<AppProps, AppState> {
           </div>
         </div>
         <header id="who" className="Roseblue Right">
-          <div id="Extendy" className="buoy test" style={{background: themeColorOne}}>
-            <div id="Righty" className="clip test" style={{background: themeColorOne}}></div>
+          <div id="Extendy" className="buoy test">
+            <div id="Righty" className="clip test"></div>
           </div>
           <div className="container">
             <div className="nav">
@@ -96,7 +94,7 @@ class App extends React.Component<AppProps, AppState> {
           </div>
         </header>
         <div style={{position: 'absolute', top: '100%',left: '50%', height: '100%', width: '50%', zIndex: 0, background: '#F1F5FF'}}></div>
-        <div className="Who-We-Are test" style={{background: themeColorOne, borderBottomRightRadius: '50% 30%'}}>
+        <div className="Who-We-Are test" style={{borderBottomRightRadius: '50% 30%'}}>
           <div className="container">
             <div className="row" style={{alignItems: 'center', justifyContent: 'center'}}>
               <img src="https://cdn.discordapp.com/attachments/404412894856347663/629465479014252564/paintingcoloredtiltthisactuallygoodwhothefuckknowsanymoreblue.svg" alt="asdf" style={{marginRight: 64}} />
@@ -105,7 +103,7 @@ class App extends React.Component<AppProps, AppState> {
           </div>
         </div>
         <div className="test" style={{position: 'absolute', top: 'calc(100% + 15rem)', height: '120px', width: '50%', zIndex: 0}}></div>
-        <div className="What-We-Do" style={{background: themeColorTwo, borderTopLeftRadius: '50% 16%'}}>
+        <div className="What-We-Do" style={{borderTopLeftRadius: '50% 16%'}}>
           <div style={{position: 'absolute', top: '2rem', right: '5%', zIndex: 0, userSelect: 'none', fontSize: '10vw', opacity: 0.2, fontWeight: 'bold', color: '#F27047'}}>what we do</div>
           <div className="container" style={{position: 'relative'}}>
             <h2 className="title">What We Do</h2>
