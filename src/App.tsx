@@ -8,16 +8,10 @@ type AppProps = {
 };
 
 type AppState = {
-  theme: boolean,
-  theme2: boolean
+
 };
 
 class App extends React.Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-
-    this.state = {theme: false, theme2: false}
-  }
   componentDidMount() {
     window.addEventListener('scroll', this.headerScrollEffect, true);
     this.headerScrollEffect();
@@ -52,7 +46,7 @@ class App extends React.Component<AppProps, AppState> {
       }
     }
 
-    if(scrollHeight > (screenHeight - 3*rem) && !this.state.theme) {
+    if(scrollHeight > screenHeight - 3*rem) {
       extendy.style.boxShadow = "0 0.1rem 0.2rem rgba(0,0,0,0.3)";
     } else {
       extendy.style.boxShadow = null;
@@ -93,11 +87,11 @@ class App extends React.Component<AppProps, AppState> {
           </div>
           <div className="container">
             <div className="nav">
-              <div className="nav-item"><a onClick={() => {this.setState({theme: !this.state.theme})}} href="#goesAchoo">theme change</a></div>
-              <div className="nav-item"><a onClick={() => {this.setState({theme2: !this.state.theme2})}} href="#mowsTheView">other theme change</a></div>
-              {/* <div className="nav-item"><a href="#showsAnew">blog</a></div> */}
-              {/* <div className="nav-item"><a href="#proseAskew">work</a></div>
-              <div className="nav-item"><a href="#throwsAdieu">contact</a></div> */}
+              <div className="nav-item"><a href="#showsAnew">blog</a></div>
+              <div className="nav-item"><a href="#showsAnew">blog</a></div>
+              <div className="nav-item"><a href="#showsAnew">blog</a></div>
+              <div className="nav-item"><a href="#proseAskew">work</a></div>
+              <div className="nav-item"><a href="#throwsAdieu">contact</a></div>
             </div>
           </div>
         </header>
