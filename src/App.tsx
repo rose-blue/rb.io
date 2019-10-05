@@ -53,28 +53,28 @@ class App extends React.Component<AppProps, AppState> {
     }
 
     if(scrollHeight > (screenHeight - 3*rem) && !this.state.theme) {
-      extendy.style.boxShadow = "0 0.1rem 0.2rem rgba(96, 91, 222, 0.4)";
+      extendy.style.boxShadow = "0 0.1rem 0.2rem rgba(0,0,0,0.3)";
     } else {
       extendy.style.boxShadow = null;
     }
   }
 
   render() {
-    const { theme, theme2 } = this.state;
-    const themeColorOne = theme ? 'rgba(0,0,0,0.9)' : 'rgba(97, 101, 226, 0.9)';
-    const themeColorTwo = theme2 ? '#fff' : '#B2E1FF';
+    const themeColorOne = '';
+    const themeColorTwo = '';
     return (
       <div className="App">
-        {window.innerWidth > 6000 ? (<div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'black', zIndex: 1000}}>
-          <div style={{display: 'flex', height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}><h1>Hey! What's your problem.</h1></div>
+        {window.innerWidth > 6000 ? (
+        <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'black', zIndex: 1000}}>
+          <div style={{display: 'flex', height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}><h1>Hey! If you browse the internet at this width you don't deserve to do so at peace. Enjoy your hubris.</h1></div>
         </div>) : null}
         <div className="Hero-container">
           <Hero />
         </div>
         <div className="Roseblue Left">
           <div className="container">
-            <div id="Lefty" className="buoy" style={{background: themeColorOne}}>
-              <div className="clip" style={{background: themeColorOne}}></div>
+            <div id="Lefty" className="buoy test" style={{background: themeColorOne}}>
+              <div className="clip test" style={{background: themeColorOne}}></div>
             </div>
             <a href="/" className="title">rose(blue)</a>
           </div>
@@ -88,8 +88,8 @@ class App extends React.Component<AppProps, AppState> {
           </div>
         </div>
         <header id="who" className="Roseblue Right">
-          <div id="Extendy" className="buoy" style={{background: themeColorOne}}>
-            <div id="Righty" className="clip" style={{background: themeColorOne}}></div>
+          <div id="Extendy" className="buoy test" style={{background: themeColorOne}}>
+            <div id="Righty" className="clip test" style={{background: themeColorOne}}></div>
           </div>
           <div className="container">
             <div className="nav">
@@ -101,20 +101,25 @@ class App extends React.Component<AppProps, AppState> {
             </div>
           </div>
         </header>
-        <div className="Who-We-Are" style={{background: themeColorOne}}>
+        <div style={{position: 'absolute', top: '100%',left: '50%', height: '100%', width: '50%', zIndex: 0, background: '#F1F5FF'}}></div>
+        <div className="Who-We-Are test" style={{background: themeColorOne, borderBottomRightRadius: '50% 30%'}}>
           <div className="container">
-            <h2>We're a design team focused on human-centered online experiences.<br/>We develop digital solutions to fulfill your practical needs and creative dreams.</h2>
+            <div className="row" style={{alignItems: 'center', justifyContent: 'center'}}>
+              <img src="https://cdn.discordapp.com/attachments/404412894856347663/629465479014252564/paintingcoloredtiltthisactuallygoodwhothefuckknowsanymoreblue.svg" alt="asdf" style={{marginRight: 64}} />
+              <h2>We're a design team focused on human-centered online experiences.<br/>We develop digital solutions to fulfill your practical needs and creative dreams.</h2>
+            </div>
           </div>
         </div>
-        <div className="What-We-Do" style={{background: themeColorTwo}}>
-          <div className="container">
+        <div className="test" style={{position: 'absolute', top: 'calc(100% + 15rem)', height: '120px', width: '50%', zIndex: 0}}></div>
+        <div className="What-We-Do" style={{background: themeColorTwo, borderTopLeftRadius: '50% 16%'}}>
+          <div style={{position: 'absolute', top: '2rem', right: '5%', zIndex: 0, userSelect: 'none', fontSize: '10vw', opacity: 0.2, fontWeight: 'bold', color: '#F27047'}}>what we do</div>
+          <div className="container" style={{position: 'relative'}}>
             <h2 className="title">What We Do</h2>
-            <div className="row">
+            <div className="row" style={{position: 'relative', zIndex: 1}}>
               <div className="column" style={{width: '50%'}}>
                 <div className="item">
                   <h3>front end</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-  
                 </div>
               </div>
               <div className="column" style={{width: '25%'}}>

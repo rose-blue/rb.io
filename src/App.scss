@@ -1,14 +1,13 @@
 @import 'sass/vars.scss';
 
 .App {
-  // overflow-x: hidden;
   .Roseblue {
     color: $text;
     width: 100%;
     .buoy {
-      background: $translucent-bg;
+      //background: $other;
       .clip {
-        background: $translucent-bg;
+        //background: $other;
       }
     }
     &.Left {
@@ -37,6 +36,7 @@
         line-height: 3rem;
         font-size: 2rem;
         font-weight: 400;
+        color: #fff;
       }
     }
     &.Right {
@@ -107,23 +107,26 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    background: $translucent-bg;
+    //background: $other;
     padding-top: 5rem;
-    padding-bottom: 5rem;
-    text-align: center;
+    padding-bottom: 3rem;
+    text-align: left;
     h2 {
       line-height: 1.5;
     }
   }
   .What-We-Do {
     position: relative;
-    background: #fffffe;
+    z-index: 1;
+    background: $text-2;
     color: $bg;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     .title {
-      text-align: left;
+      text-align: right;
       font-weight: 700;
+      font-size: 2.5rem;
+      margin-right: 1%;
     }
     .column {
       width: 33%;

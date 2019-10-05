@@ -1,15 +1,22 @@
 $font: 'Work Sans';
 $bg: #0F1533;
-$translucent-bg: rgba($color: #6165e2, $alpha: 0.9);
+$translucent-bg: rgba($color: #B2E1FF, $alpha: 0.9);
 $text: #B2E1FF;
+$other-2: rgba($color: #BCCEEF, $alpha: 0.95);
+$text-2: #F1F5FF;
 $orange: #F27047;
 $red: #F2474C;
+$other: linear-gradient(65deg, transparentize($color: $red, $amount: 0), transparentize($color: $orange, $amount: 0));
 
 body {
   font-family: $font;
   background: $bg;
   color: $text;
   font-weight: 400;
+  @media screen and (min-width: 6000px) {
+    //you dont deserve to browse the internet in peace if you do it at this width.
+    font-size: calc(8vh + 4vw) !important;
+  }
 }
 
 h1 {
@@ -54,4 +61,11 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.test {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: $other;
 }

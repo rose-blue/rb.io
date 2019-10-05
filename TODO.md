@@ -3,8 +3,11 @@
 ## Refactoring
 
 * Remove all debug stuff
-* App Component SASS
+* App
+  * .scss
+  * .tsx
 * Header -> new component
+* vars.scss
 
 ## New
 
