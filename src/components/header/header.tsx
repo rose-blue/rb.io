@@ -1,4 +1,5 @@
 import React from 'react';
+import ARb from '../../dummies/a-rb';
 import './header.scss';
 
 export default class Header extends React.Component {
@@ -8,8 +9,7 @@ export default class Header extends React.Component {
   }
 
   headerScroll = (event?) => {
-    const screenWidth = window.innerWidth;
-    if(screenWidth > 800) {
+    if(window.innerWidth > 800) {
       const screenHeight = window.innerHeight;
       const scrollHeight = window.scrollY;
       const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
@@ -59,19 +59,34 @@ export default class Header extends React.Component {
       } else {
         anchor.style.boxShadow = null;
       }
+    } else {
+      const anchor = document.getElementById("header-bg");
+      anchor.style.width = null;
+
+      const anchorClip = document.getElementById("right-curve");
+      anchorClip.style.display = null;
+
+      const nav = document.getElementById("nav");
+
+      nav.style.width = null;
+      const navItems = document.getElementById("nav-items");
+      navItems.style.width = null;
+
+      const rb = document.getElementById("rb");
+      rb.style.display = null;
     }
   }
 
   render() {
     return (
-      <header id="who" className="Header">
+      <header className="Header">
         <div id="header-bg" className="anchor ogr">
           <div id="right-curve" className="anchor-clip ogr"></div>
         </div>
         <div className="container">
           <div className="nav" id="nav">
             <div className="rb" id="rb">
-              <a href="/" className="title">rose(blue)</a>
+              <ARb />
             </div>
             <div className="nav-items" id="nav-items">
               <div className="nav-item"><a href="#showsAnew">about</a></div>
@@ -80,6 +95,9 @@ export default class Header extends React.Component {
               <div className="nav-item"><a href="#brosAShoe">test</a></div>
               <div className="nav-item"><a href="#hoesForYou">test</a></div>
             </div>
+            <button className="ham">
+              
+            </button>
           </div>
         </div>
       </header>

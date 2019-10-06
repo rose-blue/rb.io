@@ -1,0 +1,9 @@
+.title {
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  @media screen and (max-width: 800px) {
+    padding-left: 0;
+    font-size: 1.5rem;
+  }
+}

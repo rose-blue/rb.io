@@ -3,6 +3,7 @@ import './App.scss';
 import Hero from './components/hero';
 import Header from './components/header';
 import ButtonHero from './components/button-hero';
+import ARb from './dummies/a-rb';
 
 type AppProps = {
 
@@ -36,7 +37,7 @@ class App extends React.Component<AppProps, AppState> {
 
   render() {
     return (
-      <div className="App">
+      <div className="App" id="roseblue">
         {window.innerWidth > 6000 ? (
         <div style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'black', zIndex: 1000}}>
           <div style={{display: 'flex', height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}><h1>Hey! If you browse the internet at this width you don't deserve to do so at peace. Enjoy your hubris.</h1></div>
@@ -49,7 +50,7 @@ class App extends React.Component<AppProps, AppState> {
             <div id="Lefty" className="buoy ogr">
               <div className="clip ogr"></div>
             </div>
-            <a href="/" className="title">rose(blue)</a>
+            <ARb />
           </div>
         </div>
         <div className="Mast-text">
@@ -61,19 +62,19 @@ class App extends React.Component<AppProps, AppState> {
           </div>
         </div>
         <Header />
-        <div style={{position: 'absolute', top: '100%',left: '50%', height: '100%', width: '50%', zIndex: 0, background: '#F1F5FF'}}></div>
-        <div className="Who-We-Are ogr" style={{borderBottomRightRadius: '50% 30%'}}>
+        <div className="bg-filler right white" style={{top: '100%'}}></div>
+        <div id="who" className="Who-We-Are ogr">
           <div className="container">
-            <div className="row" style={{alignItems: 'center', justifyContent: 'center'}}>
-              <img src="https://cdn.discordapp.com/attachments/404412894856347663/629465479014252564/paintingcoloredtiltthisactuallygoodwhothefuckknowsanymoreblue.svg" alt="asdf" style={{marginRight: 64}} />
+            <div className="row align-items-center justify-content-center row-reverse">
               <h2>We're a design team focused on human-centered online experiences.<br/>We develop digital solutions to fulfill your practical needs and creative dreams.</h2>
+              <img src="https://cdn.discordapp.com/attachments/404412894856347663/629465479014252564/paintingcoloredtiltthisactuallygoodwhothefuckknowsanymoreblue.svg" alt="nice" className="do-img" />
             </div>
           </div>
         </div>
-        <div className="ogr" style={{position: 'absolute', top: 'calc(100% + 15rem)', height: '120px', width: '50%', zIndex: 0}}></div>
-        <div className="What-We-Do" style={{borderTopLeftRadius: '50% 16%'}}>
-          <div style={{position: 'absolute', top: '2rem', right: '5%', zIndex: 0, userSelect: 'none', fontSize: '10vw', opacity: 0.2, fontWeight: 'bold', color: '#F27047'}}>what we do</div>
-          <div className="container" style={{position: 'relative'}}>
+        <div className="bg-filler left ogr" style={{top: 'calc(100% + 10rem)'}}></div>
+        <div className="What-We-Do">
+          <div className="bg-filler">what we do</div>
+          <div className="container">
             <h2 className="title">What We Do</h2>
             <div className="row" style={{position: 'relative', zIndex: 1}}>
               <div className="column" style={{width: '50%'}}>

@@ -20,7 +20,8 @@ export default class ButtonHero extends React.Component<ButtonHeroProps, ButtonH
     const SCROLL = scroll('a[href*="#"]', {
       speed: 750,
       speedAsDuration: true,
-      easing: 'easeInOutQuint'
+      easing: 'easeInOutQuint',
+      offset: 48
     });
     this.setState({
       scroll: SCROLL,
