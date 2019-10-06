@@ -1,5 +1,5 @@
 import React from 'react';
-import lottie, { AnimationItem } from 'lottie-web';
+import lottie_light, { AnimationItem } from 'lottie-web';
 import { scroll } from '../../utilities/scroll';
 import './button-hero.scss';
 
@@ -29,7 +29,7 @@ export default class ButtonHero extends React.Component<ButtonHeroProps, ButtonH
       direction: 1,
     });
 
-    this.animation = lottie.loadAnimation({
+    this.animation = lottie_light.loadAnimation({
       path: 'https://assets10.lottiefiles.com/packages/lf20_Jk6WJm.json',
       container: document.getElementById("Button-Hero-Svg"),
       renderer: 'svg',

@@ -1,5 +1,5 @@
 import React from 'react';
-import lottie, { AnimationItem, AnimationConfigWithPath, AnimationDirection } from 'lottie-web';
+import lottie_light, { AnimationItem, AnimationConfigWithPath, AnimationDirection } from 'lottie-web';
 import { doNothing } from '../../utilities/helpers';
 
 type LottieProps = {
@@ -43,7 +43,7 @@ export default class Lottie extends React.Component<LottieProps, {}> {
 
     this.options = {...this.options, ...options};
 
-    this.animation = lottie.loadAnimation(this.options);
+    this.animation = lottie_light.loadAnimation(this.options);
 
     this.registerEvents(events);
   }
