@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Hero from './components/hero';
+import Header from './components/header';
 import ButtonHero from './components/button-hero';
 
 type AppProps = {
@@ -21,35 +22,15 @@ class App extends React.Component<AppProps, AppState> {
     const screenHeight = window.innerHeight;
     const scrollHeight = window.scrollY;
     const lefty = document.getElementById("Lefty");
-    const righty = document.getElementById("Righty");
-    const extendy = document.getElementById("Extendy");
     const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
     if(scrollHeight > (screenHeight - 3*rem - 1)) {
       if(lefty.style.display!=='none') {
         lefty.style.display = 'none';
       }
-      if(righty.style.display!=='none') {
-        righty.style.display = 'none';
-      }
-      if(extendy.style.width!=='100%') {
-        extendy.style.width = '100%';
-      }
     } else {
       if(lefty.style.display!=='block') {
         lefty.style.display = 'block';
       }
-      if(righty.style.display!=='block') {
-        righty.style.display = 'block';
-      }
-      if(extendy.style.width==='100%') {
-        extendy.style.width = null;
-      }
-    }
-
-    if(scrollHeight > screenHeight - 3*rem) {
-      extendy.style.boxShadow = "0 0.1rem 0.2rem rgba(0,0,0,0.3)";
-    } else {
-      extendy.style.boxShadow = null;
     }
   }
 
@@ -65,8 +46,8 @@ class App extends React.Component<AppProps, AppState> {
         </div>
         <div className="Roseblue Left">
           <div className="container">
-            <div id="Lefty" className="buoy test">
-              <div className="clip test"></div>
+            <div id="Lefty" className="buoy ogr">
+              <div className="clip ogr"></div>
             </div>
             <a href="/" className="title">rose(blue)</a>
           </div>
@@ -79,22 +60,9 @@ class App extends React.Component<AppProps, AppState> {
             </div>
           </div>
         </div>
-        <header id="who" className="Roseblue Right">
-          <div id="Extendy" className="buoy test">
-            <div id="Righty" className="clip test"></div>
-          </div>
-          <div className="container">
-            <div className="nav">
-              <div className="nav-item"><a href="#showsAnew">blog</a></div>
-              <div className="nav-item"><a href="#showsAnew">blog</a></div>
-              <div className="nav-item"><a href="#showsAnew">blog</a></div>
-              <div className="nav-item"><a href="#proseAskew">work</a></div>
-              <div className="nav-item"><a href="#throwsAdieu">contact</a></div>
-            </div>
-          </div>
-        </header>
+        <Header />
         <div style={{position: 'absolute', top: '100%',left: '50%', height: '100%', width: '50%', zIndex: 0, background: '#F1F5FF'}}></div>
-        <div className="Who-We-Are test" style={{borderBottomRightRadius: '50% 30%'}}>
+        <div className="Who-We-Are ogr" style={{borderBottomRightRadius: '50% 30%'}}>
           <div className="container">
             <div className="row" style={{alignItems: 'center', justifyContent: 'center'}}>
               <img src="https://cdn.discordapp.com/attachments/404412894856347663/629465479014252564/paintingcoloredtiltthisactuallygoodwhothefuckknowsanymoreblue.svg" alt="asdf" style={{marginRight: 64}} />
@@ -102,7 +70,7 @@ class App extends React.Component<AppProps, AppState> {
             </div>
           </div>
         </div>
-        <div className="test" style={{position: 'absolute', top: 'calc(100% + 15rem)', height: '120px', width: '50%', zIndex: 0}}></div>
+        <div className="ogr" style={{position: 'absolute', top: 'calc(100% + 15rem)', height: '120px', width: '50%', zIndex: 0}}></div>
         <div className="What-We-Do" style={{borderTopLeftRadius: '50% 16%'}}>
           <div style={{position: 'absolute', top: '2rem', right: '5%', zIndex: 0, userSelect: 'none', fontSize: '10vw', opacity: 0.2, fontWeight: 'bold', color: '#F27047'}}>what we do</div>
           <div className="container" style={{position: 'relative'}}>

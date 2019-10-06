@@ -4,12 +4,6 @@
   .Roseblue {
     color: $text;
     width: 100%;
-    .buoy {
-      //background: $other;
-      .clip {
-        //background: $other;
-      }
-    }
     &.Left {
       z-index: 10;
       position: fixed;
@@ -37,41 +31,6 @@
         font-size: 2rem;
         font-weight: 400;
         color: #fff;
-      }
-    }
-    &.Right {
-      position: sticky;
-      top: 0;
-      z-index: 12;
-      text-align: right;
-      .buoy {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: calc(65% - 5rem);
-        height: 3rem;
-        .clip {
-          position: absolute;
-          top: 0;
-          left: -5rem;
-          width: 5rem;
-          height: 3rem;
-          clip-path: url(#right);
-        }
-      }
-      .nav {
-        position: relative;
-        z-index: 11;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 60%;
-        margin-left: auto;
-        line-height: 3rem;
-        .nav-item {
-          padding-left: 1rem;
-          padding-right: 1rem;
-        }
       }
     }
   }
@@ -162,10 +121,3 @@
     }
   }
 }
-// .Rose {
-//   background: -webkit-linear-gradient(135deg, $orange, $red);
-//   background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   font-weight: 600;
-//   font-size: 1.5rem;
-// }

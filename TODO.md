@@ -14,6 +14,7 @@
   * rename sass variables (bg, translucent-bg, text, other-2, text-2, other)
   * replace sass variable names everywhere
   * create vars for media breakpoints
+* figure out what to do with the rose(blue) logo
 
 ## New
 
@@ -28,4 +29,4 @@
   * Large Version (>1600px)
 * Header Component
   * Stateless?
-  * 
+  * handle headerscrolleffect in App
