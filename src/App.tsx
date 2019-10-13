@@ -4,6 +4,7 @@ import Hero from './components/hero';
 import Header from './components/header';
 import ButtonHero from './components/button-hero';
 import ARb from './dummies/a-rb';
+import InfoSlider from './components/info-slider';
 
 type AppProps = {
 
@@ -76,26 +77,7 @@ class App extends React.Component<AppProps, AppState> {
           <div className="bg-filler">what we do</div>
           <div className="container">
             <h2 className="title">What We Do</h2>
-            <div className="row" style={{position: 'relative', zIndex: 1}}>
-              <div className="column" style={{width: '50%'}}>
-                <div className="item">
-                  <h3>front end</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
-              </div>
-              <div className="column" style={{width: '25%'}}>
-                <div className="item">
-                  <h3>back end</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna liqua.</p>
-                </div>
-              </div>
-              <div className="column" style={{width: '25%'}}>
-                <div className="item">
-                  <h3>e commerce</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna liqua.</p>
-                </div>
-              </div>
-            </div>
+            <InfoSlider info={info} />
           </div>
         </div>
         <div className="Coming-Soon">
@@ -119,5 +101,18 @@ class App extends React.Component<AppProps, AppState> {
     );
   }
 }
+
+const info = [
+  {
+    name: 'frontend',
+    data: 'lorem ipsum dolor sit amet',
+  }, {
+    name: 'backend',
+    data: 'lorem ipsum dolor sit amet'
+  }, {
+    name: 'ecommerce',
+    data: 'lorem ipsum dolor sit amet'
+  }
+];
 
 export default App;

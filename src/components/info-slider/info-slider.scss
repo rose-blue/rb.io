@@ -1,0 +1,29 @@
+@import '../../sass/vars.scss';
+
+.Info-Slider {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  color: $light-blue;
+  &.Mobile {
+    flex-flow: column nowrap;
+    .Info-Item {
+      width: calc(100% - 3rem);
+      margin: 1rem 0;
+      padding: 1.5rem;
+      border-top-left-radius: 10% 50%;
+      border-bottom-right-radius: 10% 50%;
+    }
+  }
+
+  &.Slidey {
+
+  }
+
+  &.Expando {
+
+  }
+  .Info-Item {
+    background: $dark-blue;
+  }
+}
