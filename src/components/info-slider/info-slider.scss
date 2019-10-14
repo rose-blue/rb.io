@@ -17,7 +17,55 @@
   }
 
   &.Slidey {
-
+    align-items: center;
+    .Primary {
+      width: 67%;
+      .Info-Item {
+        width: calc(100% - 3rem);
+        height: calc(100% - 3rem);
+        padding: 1rem;
+        margin: 0.5rem 0.5rem;
+      }
+    }
+    .Secondary {
+      width: 33%;
+      .Info-Item {
+        width: calc(100% - 3rem);
+        height: calc(100% - 3rem);
+        padding: 1rem;
+        margin: 0.5rem 0.5rem;
+      }
+    }
+    .AR {
+      width: 100%;
+      padding-bottom: 57%;
+      position: relative;
+    }
+    .AR-Nested {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .animation-container {
+      position: relative;
+      &.from-top {
+        animation: from-top 300ms ease-in-out;
+      }
+      &.from-top-2 {
+        animation: from-top 300ms ease-in-out;
+      }
+      &.from-bottom {
+        animation: from-bottom 300ms ease-in-out;
+      }
+      &.from-bottom-2 {
+        animation: from-bottom 300ms ease-in-out;
+      }
+      &.to-top {
+        animation: to-top 300ms ease-in-out;
+      }
+    }
   }
 
   &.Expando {
@@ -25,5 +73,49 @@
   }
   .Info-Item {
     background: $dark-blue;
+  }
+}
+
+@keyframes from-top {
+  0% {
+    opacity: 0;
+    top: -1rem;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes from-bottom {
+  0% {
+    opacity: 0;
+    bottom: -1rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes to-top {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -1rem;
+    opacity: 0;
+  }
+}
+
+@keyframes to-bottom {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: -1rem;
+    opacity: 0;
   }
 }
