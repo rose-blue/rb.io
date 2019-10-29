@@ -93,7 +93,7 @@ export default class Header extends React.Component {
               <div className="nav-item"><a href="#proseAskew">blog</a></div>
               <div className="nav-item"><a href="#goesAchoo">test</a></div>
               <div className="nav-item"><a href="#brosAShoe">test</a></div>
-              <div className="nav-item"><a href="#hoesForYou">test</a></div>
+              <div className="nav-item"><a href="#foesForYou">test</a></div>
             </div>
             <button className="ham">
               
